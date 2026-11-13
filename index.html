@@ -9,8 +9,8 @@
   <meta name="theme-color" content="#070709" />
   <title>Фильм+</title>
   <link rel="manifest" href="manifest.json" />
-  <script type="module" crossorigin src="/film-plus/assets/index-B64bjvwC.js"></script>
-  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-BV1wFKfQ.css">
+  <script type="module" crossorigin src="/film-plus/assets/index-BpKOuy2o.js"></script>
+  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-BsTOY4Al.css">
 </head>
 <body class="app-body min-h-screen antialiased">
 
@@ -110,7 +110,7 @@
 
   <div id="playerModal" class="player-modal hidden" role="dialog" aria-modal="true">
     <div id="modalAmbient" class="modal-ambient" aria-hidden="true"></div>
-    <div class="modal-scrim" aria-hidden="true"></div>
+    <div id="playerModalBackdrop" class="modal-scrim" aria-hidden="true"></div>
 
     <button type="button" id="closeModalBtn" class="modal-close-btn modal-close-floating" aria-label="Закрыть">
       ✕
@@ -118,27 +118,13 @@
 
     <div class="modal-sheet">
       <div class="player-top-bar">
-        <div class="player-source-picker">
-          <button
-            type="button"
-            id="playerSourceBtn"
-            class="source-pill"
-            aria-haspopup="listbox"
-            aria-expanded="false"
-            aria-controls="playerSourceMenu"
-          >
-            <span class="source-pill-prefix">Источник:</span>
-            <span id="playerSourceName">Collaps</span>
-            <span class="source-caret" aria-hidden="true">▾</span>
+        <div id="playerSourceSwitch" class="source-switch" role="tablist" aria-label="Источник плеера">
+          <button type="button" class="source-switch-btn source-switch-btn-active" data-player-id="collaps" role="tab">
+            Collaps
           </button>
-          <div id="playerSourceMenu" class="source-menu hidden" role="listbox" aria-label="Источник плеера">
-            <button type="button" class="source-menu-item source-menu-item-active" data-player-id="collaps" role="option">
-              Collaps
-            </button>
-            <button type="button" class="source-menu-item" data-player-id="alloha" role="option">
-              Alloha
-            </button>
-          </div>
+          <button type="button" class="source-switch-btn" data-player-id="alloha" role="tab">
+            Alloha
+          </button>
         </div>
       </div>
 
@@ -165,7 +151,7 @@
               aria-label="Прогресс серии"
             />
           </div>
-          <button type="button" id="scrubberDuration" class="scrubber-time scrubber-time-end scrubber-time-btn">42:00</button>
+          <button type="button" id="scrubberDuration" class="scrubber-time scrubber-time-end scrubber-time-btn">45:00</button>
           <button
             type="button"
             id="scrubberJumpBtn"
