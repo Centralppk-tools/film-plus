@@ -9,8 +9,8 @@
   <meta name="theme-color" content="#070709" />
   <title>Фильм+</title>
   <link rel="manifest" href="manifest.json" />
-  <script type="module" crossorigin src="/film-plus/assets/index-BBgxeeIs.js"></script>
-  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-C_kjOtCs.css">
+  <script type="module" crossorigin src="/film-plus/assets/index-Dan65BQG.js"></script>
+  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-BcKLHnXT.css">
 </head>
 <body class="app-body min-h-screen antialiased">
 
@@ -63,7 +63,7 @@
 
       <section id="watchlistSection" class="shelf-section hidden">
         <div class="shelf-head">
-          <h2 class="shelf-title">Буду смотреть</h2>
+          <h2 class="shelf-title">Лайки</h2>
         </div>
         <div id="watchlistGrid" class="movie-grid"></div>
         <p id="watchlistEmpty" class="empty-hint hidden">Добавляйте фильмы в избранное на странице просмотра</p>
@@ -81,10 +81,10 @@
 
     <section id="favoritesView" class="hidden">
       <div class="shelf-head mt-2">
-        <h2 class="shelf-title">Избранное</h2>
+        <h2 class="shelf-title">Лайки</h2>
       </div>
       <div id="favoritesGrid" class="movie-grid"></div>
-      <p id="favoritesEmpty" class="empty-hint">Пока пусто. Нажмите «Буду смотреть» на странице фильма</p>
+      <p id="favoritesEmpty" class="empty-hint">Пока пусто. Нажмите сердечко на странице фильма</p>
     </section>
 
   </main>
@@ -100,7 +100,7 @@
     </button>
     <button type="button" class="tab-item" data-nav="favorites">
       <span class="tab-icon">♥</span>
-      <span>Избранное</span>
+      <span>Лайки</span>
     </button>
   </nav>
 
@@ -116,42 +116,19 @@
 
       <div id="playerSourceTabs" class="source-tabbar hidden" role="tablist"></div>
 
-      <div id="playerContainer" class="player-stage">
+      <div id="playerContainer" class="player-stage player-stage-clean">
         <div id="playerMount" class="player-mount"></div>
-      </div>
-
-      <div class="controls-glass">
-        <div class="ep-controls">
-          <div class="stepper-block">
-            <span class="stepper-label">Сезон</span>
-            <div class="stepper">
-              <button type="button" id="seasonMinus" class="stepper-btn" aria-label="Минус сезон">−</button>
-              <span id="seasonDisplay" class="stepper-value">1</span>
-              <button type="button" id="seasonPlus" class="stepper-btn" aria-label="Плюс сезон">+</button>
-            </div>
-            <input type="hidden" id="seasonInput" value="1" />
-          </div>
-          <div class="stepper-block">
-            <span class="stepper-label">Серия</span>
-            <div class="stepper">
-              <button type="button" id="episodeMinus" class="stepper-btn" aria-label="Минус серия">−</button>
-              <span id="episodeDisplay" class="stepper-value">1</span>
-              <button type="button" id="episodePlus" class="stepper-btn" aria-label="Плюс серия">+</button>
-            </div>
-            <input type="hidden" id="episodeInput" value="1" />
-          </div>
-        </div>
-        <div class="action-row">
-          <button type="button" id="nextEpisodeBtn" class="glass-pill-btn">Следующая серия</button>
-          <button type="button" id="saveProgressBtn" class="primary-btn">Сохранить прогресс</button>
-          <button type="button" id="watchlistToggleBtn" class="glass-pill-btn">Буду смотреть</button>
-        </div>
       </div>
 
       <div class="modal-info">
         <img id="modalPoster" src="" alt="" class="modal-poster" />
         <div class="modal-copy">
-          <h1 id="modalTitle" class="modal-title"></h1>
+          <div class="modal-title-row">
+            <h1 id="modalTitle" class="modal-title"></h1>
+            <button type="button" id="likeBtn" class="like-btn" aria-label="В избранное" aria-pressed="false">
+              <span class="like-icon" aria-hidden="true">♡</span>
+            </button>
+          </div>
           <div id="modalMeta" class="modal-meta"></div>
           <p id="modalDesc" class="modal-desc"></p>
         </div>
