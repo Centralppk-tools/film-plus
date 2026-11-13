@@ -9,8 +9,8 @@
   <meta name="theme-color" content="#070709" />
   <title>Фильм+</title>
   <link rel="manifest" href="manifest.json" />
-  <script type="module" crossorigin src="/film-plus/assets/index-C1ILSGjk.js"></script>
-  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-_01pLvWH.css">
+  <script type="module" crossorigin src="/film-plus/assets/index-C5nOxpNf.js"></script>
+  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-Baegb-LY.css">
 </head>
 <body class="app-body min-h-screen antialiased">
 
@@ -141,6 +141,28 @@
 
       <div id="playerContainer" class="player-stage player-stage-clean">
         <div id="playerMount" class="player-mount"></div>
+      </div>
+
+      <div id="playerScrubber" class="player-scrubber hidden" aria-label="Прогресс просмотра">
+        <p id="scrubberHint" class="scrubber-hint hidden"></p>
+        <div class="scrubber-row">
+          <span id="scrubberCurrent" class="scrubber-time">0:00</span>
+          <div
+            id="scrubberTrack"
+            class="scrubber-track"
+            role="slider"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            tabindex="0"
+          >
+            <div id="scrubberFill" class="scrubber-fill"></div>
+            <div id="scrubberThumb" class="scrubber-thumb"></div>
+          </div>
+          <span id="scrubberDuration" class="scrubber-time scrubber-time-end">42:00</span>
+          <button type="button" id="scrubberWatchedBtn" class="scrubber-watched-btn">
+            Просмотрено ✓
+          </button>
+        </div>
       </div>
 
       <section id="seriesBlock" class="series-block hidden" aria-label="Серии">
