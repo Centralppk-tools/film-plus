@@ -9,8 +9,8 @@
   <meta name="theme-color" content="#070709" />
   <title>Фильм+</title>
   <link rel="manifest" href="manifest.json" />
-  <script type="module" crossorigin src="/film-plus/assets/index-CRhNKBM5.js"></script>
-  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-3eBg75yH.css">
+  <script type="module" crossorigin src="/film-plus/assets/index-B64bjvwC.js"></script>
+  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-BV1wFKfQ.css">
 </head>
 <body class="app-body min-h-screen antialiased">
 
@@ -117,33 +117,29 @@
     </button>
 
     <div class="modal-sheet">
-      <div class="player-modal-chrome">
-        <div class="player-toolbar">
-          <span class="player-chrome-label">Плеер</span>
-          <div class="player-source-picker">
-            <button
-              type="button"
-              id="playerSourceBtn"
-              class="source-pill hidden"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-              aria-controls="playerSourceMenu"
-            >
-              <span class="source-pill-prefix">Источник:</span>
-              <span id="playerSourceName">Collaps</span>
-              <span class="source-caret" aria-hidden="true">▾</span>
+      <div class="player-top-bar">
+        <div class="player-source-picker">
+          <button
+            type="button"
+            id="playerSourceBtn"
+            class="source-pill"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="playerSourceMenu"
+          >
+            <span class="source-pill-prefix">Источник:</span>
+            <span id="playerSourceName">Collaps</span>
+            <span class="source-caret" aria-hidden="true">▾</span>
+          </button>
+          <div id="playerSourceMenu" class="source-menu hidden" role="listbox" aria-label="Источник плеера">
+            <button type="button" class="source-menu-item source-menu-item-active" data-player-id="collaps" role="option">
+              Collaps
             </button>
-            <div id="playerSourceMenu" class="source-menu hidden" role="listbox" aria-label="Источник плеера">
-              <button type="button" class="source-menu-item source-menu-item-active" data-player-id="collaps" role="option">
-                Collaps
-              </button>
-              <button type="button" class="source-menu-item" data-player-id="alloha" role="option">
-                Alloha
-              </button>
-            </div>
+            <button type="button" class="source-menu-item" data-player-id="alloha" role="option">
+              Alloha
+            </button>
           </div>
         </div>
-        <div id="playerSourceTabs" class="source-tabbar" role="tablist" aria-label="Выбор плеера"></div>
       </div>
 
       <div id="playerContainer" class="player-stage player-stage-clean">
