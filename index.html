@@ -9,8 +9,8 @@
   <meta name="theme-color" content="#070709" />
   <title>Фильм+</title>
   <link rel="manifest" href="manifest.json" />
-  <script type="module" crossorigin src="/film-plus/assets/index-C5nOxpNf.js"></script>
-  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-Baegb-LY.css">
+  <script type="module" crossorigin src="/film-plus/assets/index-CKIAT5rt.js"></script>
+  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-CgjWuS5u.css">
 </head>
 <body class="app-body min-h-screen antialiased">
 
@@ -147,16 +147,20 @@
         <p id="scrubberHint" class="scrubber-hint hidden"></p>
         <div class="scrubber-row">
           <span id="scrubberCurrent" class="scrubber-time">0:00</span>
-          <div
-            id="scrubberTrack"
-            class="scrubber-track"
-            role="slider"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            tabindex="0"
-          >
-            <div id="scrubberFill" class="scrubber-fill"></div>
-            <div id="scrubberThumb" class="scrubber-thumb"></div>
+          <div class="scrubber-track-wrap">
+            <div class="scrubber-track-visual" aria-hidden="true">
+              <div id="scrubberFill" class="scrubber-fill"></div>
+            </div>
+            <input
+              type="range"
+              id="scrubberRange"
+              class="scrubber-range"
+              min="0"
+              max="100"
+              step="0.1"
+              value="0"
+              aria-label="Прогресс серии"
+            />
           </div>
           <span id="scrubberDuration" class="scrubber-time scrubber-time-end">42:00</span>
           <button type="button" id="scrubberWatchedBtn" class="scrubber-watched-btn">
