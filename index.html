@@ -9,8 +9,8 @@
   <meta name="theme-color" content="#070709" />
   <title>Фильм+</title>
   <link rel="manifest" href="manifest.json" />
-  <script type="module" crossorigin src="/film-plus/assets/index-CNZ9sI-e.js"></script>
-  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-A8TVy7_m.css">
+  <script type="module" crossorigin src="/film-plus/assets/index-MKwuSJf-.js"></script>
+  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-B39iFpjk.css">
 </head>
 <body class="app-body min-h-screen antialiased">
 
@@ -20,14 +20,14 @@
     <span class="ambient-orb ambient-orb-c"></span>
   </div>
 
-  <header id="mainHeader" class="glass-header sticky top-0 z-40">
+  <header id="mainHeader" class="glass-header">
     <div class="max-w-6xl mx-auto px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-3">
       <div class="flex items-center gap-3 md:gap-4">
         <button id="logoBtn" type="button" class="brand-btn shrink-0" aria-label="На главную">
           <span class="brand-dot"></span>
           <span class="brand-text">Фильм+</span>
         </button>
-        <div id="headerSearchWrap" class="relative flex-1 max-md:hidden">
+        <div id="headerSearchWrap" class="relative z-[100] flex-1 max-md:hidden">
           <input id="searchInput" type="search" enterkeyhint="search" autocomplete="off"
             placeholder="Фильм, сериал или аниме"
             class="glass-input w-full" />
@@ -41,7 +41,7 @@
   <main id="mainView" class="main-shell max-w-6xl mx-auto px-4 pb-28 md:pb-10">
 
     <section id="searchPanel" class="md:hidden mb-4 hidden">
-      <div class="relative">
+      <div class="relative z-[100]">
         <input id="searchInputMobile" type="search" enterkeyhint="search" autocomplete="off"
           placeholder="Поиск"
           class="glass-input w-full" />
