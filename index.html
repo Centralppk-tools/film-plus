@@ -9,8 +9,8 @@
   <meta name="theme-color" content="#070709" />
   <title>Фильм+</title>
   <link rel="manifest" href="manifest.json" />
-  <script type="module" crossorigin src="/film-plus/assets/index-Dan65BQG.js"></script>
-  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-BcKLHnXT.css">
+  <script type="module" crossorigin src="/film-plus/assets/index-BCliQCXS.js"></script>
+  <link rel="stylesheet" crossorigin href="/film-plus/assets/index-D1YzU6qJ.css">
 </head>
 <body class="app-body min-h-screen antialiased">
 
@@ -109,12 +109,31 @@
     <div class="modal-scrim"></div>
 
     <div class="modal-sheet">
-      <div class="modal-topbar">
-        <button id="closeModalBtn" type="button" class="glass-pill-btn">Назад</button>
-        <span id="modalKpId" class="modal-kp-id"></span>
+      <div class="player-toolbar">
+        <div class="player-source-picker">
+          <button
+            type="button"
+            id="playerSourceBtn"
+            class="source-pill"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="playerSourceMenu"
+          >
+            <span class="source-pill-prefix">Плеер:</span>
+            <span id="playerSourceName">Collaps</span>
+            <span class="source-caret" aria-hidden="true">▾</span>
+          </button>
+          <div id="playerSourceMenu" class="source-menu hidden" role="listbox" aria-label="Источник плеера">
+            <button type="button" class="source-menu-item source-menu-item-active" data-player-id="collaps" role="option">
+              Collaps
+            </button>
+            <button type="button" class="source-menu-item" data-player-id="alloha" role="option">
+              Alloha
+            </button>
+          </div>
+        </div>
+        <button type="button" id="closeModalBtn" class="modal-close-btn" aria-label="Закрыть">✕</button>
       </div>
-
-      <div id="playerSourceTabs" class="source-tabbar hidden" role="tablist"></div>
 
       <div id="playerContainer" class="player-stage player-stage-clean">
         <div id="playerMount" class="player-mount"></div>
